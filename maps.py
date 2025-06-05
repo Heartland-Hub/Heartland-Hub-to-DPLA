@@ -53,20 +53,11 @@ def lhl(metadata):
     return url, thumbnail, ""
 
 
-def grinnell(metadata):
-    if 'identifier' in metadata:
-        identifier = metadata['identifier'][0]
-        base_url = "https://digital.grinnell.edu"
-        collection = identifier.split(':')[0]
-        if collection != 'grinnell':
-            url = ""
-            thumbnail = ""
-        else:
-            url = f"{base_url}/islandora/object/{identifier}"
-            thumbnail = f"{base_url}/islandora/object/{identifier}/datastream/TN/view"
-    else:
-        url = ""
-        thumbnail = ""
+def grinnell(metadata): 
+    url = "https://grinnell.primo.exlibrisgroup.com/permalink/01GCL_INST/1g018f9/alma" + \
+          metadata['header']["identifier"][0].split(":")[-1]
+    thumbnail = "https://grinnell.primo.exlibrisgroup.com/view/delivery/thumbnail/01GCL_INST/" + \
+                metadata['header']["identifier"][0].split(":")[-1]
     return url, thumbnail, ""
 
 
