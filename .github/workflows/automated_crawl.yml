@@ -24,7 +24,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -51,7 +51,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id}}.json
@@ -78,7 +78,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id}}.json
@@ -105,7 +105,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -132,7 +132,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -159,7 +159,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -186,7 +186,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -213,7 +213,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -240,7 +240,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -267,7 +267,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -294,7 +294,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -321,7 +321,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -348,7 +348,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -375,7 +375,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -402,7 +402,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -429,7 +429,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -456,7 +456,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -483,7 +483,7 @@ jobs:
       working-directory: ./
       run: python main.py -i $id
     - name: Upload crawl data as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.id }}_data
         path: ${{ env.id }}.json
@@ -531,12 +531,12 @@ jobs:
       working-directory: ./
       run: python combine.py
     - name: Upload jsonl as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: mohub_ingest
         path: mohub_ingest.jsonl
     - name: Upload ingest report as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ingest_report
         path: report.txt
