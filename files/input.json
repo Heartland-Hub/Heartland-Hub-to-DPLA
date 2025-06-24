@@ -120,16 +120,6 @@
         "hub": "mohub"
     },
     {
-        "institution": "Washington University in Saint Louis",
-        "id": "wustl2",
-        "@id_prefix": "missouri--urn:data.mohistory.org:wustl_omeka:oai:omeka.wustl.edu",
-        "url": "http://omeka.wustl.edu/omeka/oai-pmh-repository/request",
-        "metadata_prefix": "oai_dc",
-        "include": null,
-        "exclude": [],
-        "hub": "mohub"
-    },
-    {
         "institution": "Linda Hall Library",
         "id": "lhl",
         "@id_prefix": "missouri--urn:data.mohistory.org:",
