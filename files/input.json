@@ -20,26 +20,6 @@
         "hub": "mohub"
     },
     {
-        "institution": "Kansas City Public Library",
-        "id": "kcpl1",
-        "@id_prefix": "missouri--urn:data.mohistory.org:kcpl_pdr:oai:pendergastkc.org",
-        "url": "https://pendergastkc.org/dpla-oai",
-        "metadata_prefix": "oai_dc",
-        "include": null,
-        "exclude": [],
-        "hub": "mohub"
-    },
-    {
-        "institution": "Kansas City Public Library",
-        "id": "kcpl2",
-        "@id_prefix": "missouri--urn:data.mohistory.org:kcpl_pdr:oai:pendergastkc.org",
-        "url": "https://kchistory.org/oai",
-        "metadata_prefix": "oai_dc",
-        "include": null,
-        "exclude": [],
-        "hub": "mohub"
-    },
-    {
         "institution": "University of Missouri - Kansas City",
         "id": "umkc",
         "@id_prefix": "missouri--urn:data.mohistory.org:umkc_dl:oai:dl.mospace.umsystem.edu/umkc/",
