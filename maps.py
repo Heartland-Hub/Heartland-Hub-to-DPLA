@@ -85,3 +85,8 @@ def isu(metadata):
     thumbnail = metadata["identifier.thumbnail"]
 
     return url, thumbnail, ""
+
+def slcl(metadata): 
+    url = metadata["identifier"][0]
+    thumbnail = "https://slcl.recollectcms.com/assets/nodeimg/" + url.split("/")[-1] + "/150/square:1/"
+    return url, thumbnail, ""

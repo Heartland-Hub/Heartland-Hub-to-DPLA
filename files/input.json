@@ -120,6 +120,46 @@
         "hub": "mohub"
     },
     {
+        "institution": "St. Louis County Library",
+        "id": "slcl1",
+        "@id_prefix": "urn:data.mohistory.org:oai:slcl.recollectcms.com",
+        "url": "https://slcl.recollectcms.com/oaipmh/index/",
+        "metadata_prefix": "oai_dc",
+        "include": [2],
+        "exclude": [],
+        "hub": "mohub"
+    },
+        {
+        "institution": "St. Louis County Library",
+        "id": "slcl2",
+        "@id_prefix": "urn:data.mohistory.org:oai:slcl.recollectcms.com",
+        "url": "https://slcl.recollectcms.com/oaipmh/index/",
+        "metadata_prefix": "oai_dc",
+        "include": [5],
+        "exclude": [],
+        "hub": "mohub"
+    },
+        {
+        "institution": "St. Louis County Library",
+        "id": "slcl3",
+        "@id_prefix": "urn:data.mohistory.org:oai:slcl.recollectcms.com",
+        "url": "https://slcl.recollectcms.com/oaipmh/index/",
+        "metadata_prefix": "oai_dc",
+        "include": [10],
+        "exclude": [],
+        "hub": "mohub"
+    },
+        {
+        "institution": "St. Louis County Library",
+        "id": "slcl4",
+        "@id_prefix": "urn:data.mohistory.org:oai:slcl.recollectcms.com",
+        "url": "https://slcl.recollectcms.com/oaipmh/index/",
+        "metadata_prefix": "oai_dc",
+        "include": [32],
+        "exclude": [],
+        "hub": "mohub"
+    },
+    {
         "institution": "Drake University",
         "id": "drake",
         "@id_prefix": "iowa--drake:oai:cdm16331.contentdm.oclc.org",
