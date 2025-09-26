@@ -9,7 +9,7 @@ def cdm(metadata):
 
 
 def frb(metadata):
-    url = utils.format_metadata("location.url", metadata, "string")
+    url = utils.format_metadata("location.url", metadata, "string").replace("/oai/", "/")
     thumbnail = utils.format_metadata("location.url_preview", metadata, "string")
     return url, thumbnail, ""
 
