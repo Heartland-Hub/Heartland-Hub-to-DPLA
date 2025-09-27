@@ -3,6 +3,7 @@ from templates import Template, dpla_template
 import utils
 from map_list import map_list
 import sys
+import html
 
 
 class Record:
@@ -87,6 +88,10 @@ class Record:
 
             if institution_id == 'kcpl1':
                 metadata["sourceResource"]["publisher"] = utils.format_metadata("publisher", self.parsed_metadata)
+            elif institution_id == 'kcpl2':
+                del metadata["relation"]
+            elif institution_id in ['slcl1', 'slcl2', 'slcl3', 'slcl4']:
+                metadata["description"] = self.parsed_metadata["description"][0].replace("<p>","").replace("</p>", "").replace("&amp", "&").replace("&nbsp", " ")             
             elif institution_id == 'lhl':
                 metadata["sourceResource"]["rights"] = "NO COPYRIGHT - UNITED STATES\nThe organization that has made the Item available believes that the Item is in the Public Domain under the laws of the United States, but a determination was not made as to its copyright status under the copyright laws of other countries. The Item may not be in the Public Domain under the laws of other countries. Please refer to the organization that has made the Item available for more information."
                 metadata["rights"] = "http://rightsstatements.org/vocab/NoC-US/1.0/"
@@ -159,7 +164,7 @@ class Record:
 
         row = {}
         if not element.findChildren(recursive=False):
-            return [element.getText().strip()]
+            return [html.unescape(element.getText().strip())]
         for el in element.findChildren(recursive=False):
             # split DC fields to just get the name without the namespace
             if len(el.name.split(':')) > 1:
