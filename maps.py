@@ -21,7 +21,7 @@ def kcpl1(metadata):
 
 
 def kcpl2(metadata):
-    url = "https://kchistory.org/islandora/object/{}".format(metadata["identifier"][0])
+    url = metadata["publisher"][0]
     thumbnail = ""
     return url, thumbnail, ""
 
