@@ -92,7 +92,7 @@ class Record:
                 del metadata["relation"]
             elif institution_id in ['slcl1', 'slcl2', 'slcl3', 'slcl4']:
                 if "description" in self.parsed_metadata.keys():
-                    metadata["description"] = self.parsed_metadata["description"][0].replace("<p>","").replace("</p>", "").replace("&amp", "&").replace("&nbsp", " ")             
+                    self.parsed_metadata["description"][0] = self.parsed_metadata["description"][0].replace("<p>","").replace("</p>", "").replace("&amp", "&").replace("&nbsp", " ")             
             elif institution_id == 'lhl':
                 metadata["sourceResource"]["rights"] = "NO COPYRIGHT - UNITED STATES\nThe organization that has made the Item available believes that the Item is in the Public Domain under the laws of the United States, but a determination was not made as to its copyright status under the copyright laws of other countries. The Item may not be in the Public Domain under the laws of other countries. Please refer to the organization that has made the Item available for more information."
                 metadata["rights"] = "http://rightsstatements.org/vocab/NoC-US/1.0/"
