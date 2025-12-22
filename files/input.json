@@ -183,11 +183,514 @@
         "exclude": [],
         "hub": "iowa"
     },
-    {
-        "institution": "Iowa State University",
-        "id": "isu",
-        "url": "https://digitalcollections.lib.iastate.edu/oai2",
-        "exclude": [],
-        "hub": "iowa"
-    }
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku1", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-wight_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku2", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-jellison_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku3", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-nicodemus_white"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku4", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-bolton_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku5", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-broadsides_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku6", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-centron_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku7", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-nicodemus_bates"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku8", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-citymoon_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku9", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-simons_dolph"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku10", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-dambra_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku11", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-endacott_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku12", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-feminist_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku13", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-harambee_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku14", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-japanese_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku15", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-gould_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku16", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-casement_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku17", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-pennell_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku18", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-kansascollection_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku19", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-kscoll-photos_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku20", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-sanborn_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku21", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-ljworld_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku22", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-lawrencephotos_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku23", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-leavenworth_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku24", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-hughes_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku25", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-bassett_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku26", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-milomain_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku27", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-huntoon_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku28", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-simons_sympathy"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku29", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-simons_misc"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku30", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-dyche_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku31", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-nicodemus_photos"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku32", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-nicodemus_records"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku33", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-nicodemus_wilson"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku34", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-jellison_papers"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku35", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-deuell_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku36", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-publicnotice_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku37", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-goetz_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku38", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-riss_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku39", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-rossetti_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku40", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-speccoll_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku41", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-baird_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku42", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-todd_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku43", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-uaphotos_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku44", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-uarecords_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku45", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-video_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku46", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-simons_genealogy"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku47", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-wwi-letters_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku48", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-wwii_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku49", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-phog_osbox1"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku50", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-phog_osbox2"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku51", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-phog_osfolder1"], 
+		"hub": "kansas"
+	}
 ]
