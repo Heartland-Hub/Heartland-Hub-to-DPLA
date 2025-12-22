@@ -90,3 +90,11 @@ def slcl(metadata):
     url = metadata["identifier"][0]
     thumbnail = "https://slcl.recollectcms.com/assets/nodeimg/" + url.split("/")[-1] + "/150/square:1/"
     return url, thumbnail, ""
+
+def ku(metadata):
+    for identifier in metadata['identifier']:
+        if identifier[0:27] == 'https://digital.lib.ku.edu/':
+            url = identifier
+            break
+    thumbnail = metadata["identifier.thumbnail"][0] if "identifier.thumbnail" in metadata else ""
+    return url, thumbnail, ""
