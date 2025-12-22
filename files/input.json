@@ -692,5 +692,25 @@
 		"exclude": [], 
 		"include": ["ku-phog_osfolder1"], 
 		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku52", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-simons_root"], 
+		"hub": "kansas"
+	},
+	{
+		"institution": "University of Kansas Libraries", 
+		"id": "ku53", 
+		"@id_prefix": "kansas--ku:oai:digital.lib.ku.edu/oai2", 
+		"metadata_prefix": "oai_dc", 
+		"url": "https://digital.lib.ku.edu/oai2", 
+		"exclude": [], 
+		"include": ["ku-bee_root"], 
+		"hub": "kansas"
 	}
 ]
