@@ -61,7 +61,7 @@ jobs:
          name: ${{ env.id }}_data
          path: ${{ env.id }}.json
 
-   crawl_kcpl1:
+  crawl_kcpl1:
     env:
       id: kcpl1
     runs-on: ubuntu-latest
@@ -90,7 +90,7 @@ jobs:
           name: ${{ env.id }}_data
           path: ${{ env.id }}.json
 
-   crawl_kcpl2:
+  crawl_kcpl2:
     env:
       id: kcpl2
     runs-on: ubuntu-latest
@@ -321,7 +321,7 @@ jobs:
        with:
          name: ${{ env.id }}_data
          path: ${{ env.id }}.json
-   crawl_wustl2:
+  crawl_wustl2:
     env:
       id: wustl2
     runs-on: ubuntu-latest
