@@ -110,7 +110,7 @@ class Record:
                 if "format" in self.parsed_metadata.keys():
                     metadata["sourceResource"]["extent"] = self.parsed_metadata["format"][0]
                     del metadata["sourceResource"]["format"]
-            elif institution_id in [ku1, ku2, ku3, ku4, ku5, ku6, ku7, ku8, ku9, ku10, ku11, ku12, ku13, ku14, ku15, ku16, ku17, ku18, ku19, ku20, ku21, ku22, ku23, ku24, ku25, ku26, ku27, ku28, ku29, ku30, ku31, ku32, ku33, ku34, ku35, ku36, ku37, ku38, ku39, ku40, ku41, ku42, ku43, ku44, ku45, ku46, ku47, ku48, ku49, ku50, ku51, ku52, ku53]:
+            elif institution_id in ['ku1', 'ku2', 'ku3', 'ku4', 'ku5', 'ku6', 'ku7', 'ku8', 'ku9', 'ku10', 'ku11', 'ku12', 'ku13', 'ku14', 'ku15', 'ku16', 'ku17', 'ku18', 'ku19', 'ku20', 'ku21', 'ku22', 'ku23', 'ku24', 'ku25', 'ku26', 'ku27', 'ku28', 'ku29', 'ku30', 'ku31', 'ku32', 'ku33', 'ku34', 'ku35', 'ku36', 'ku37', 'ku38', 'ku39', 'ku40', 'ku41', 'ku42', 'ku43', 'ku44', 'ku45', 'ku46', 'ku47', 'ku48', 'ku49', 'ku50', 'ku51', 'ku52', 'ku53']:
                 metadata["sourceResource"]["contributor"] = "University of Kansas Libraries"
 
         if not metadata:
