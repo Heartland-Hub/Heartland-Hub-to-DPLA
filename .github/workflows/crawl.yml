@@ -659,3 +659,1483 @@ jobs:
        with:
          name: ${{ env.id }}_data
          path: ${{ env.id }}.json
+
+  crawl_ku51:
+   env:
+     id: ku51
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku1:
+   env:
+     id: ku1
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku2:
+   env:
+     id: ku2
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku3:
+   env:
+     id: ku3
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku4:
+   env:
+     id: ku4
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku5:
+   env:
+     id: ku5
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku6:
+   env:
+     id: ku6
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku7:
+   env:
+     id: ku7
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku8:
+   env:
+     id: ku8
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku9:
+   env:
+     id: ku9
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku10:
+   env:
+     id: ku10
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku11:
+   env:
+     id: ku11
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku12:
+   env:
+     id: ku12
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku13:
+   env:
+     id: ku13
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku14:
+   env:
+     id: ku14
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku15:
+   env:
+     id: ku15
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku16:
+   env:
+     id: ku16
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku17:
+   env:
+     id: ku17
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku18:
+   env:
+     id: ku18
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku19:
+   env:
+     id: ku19
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku20:
+   env:
+     id: ku20
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku21:
+   env:
+     id: ku21
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku22:
+   env:
+     id: ku22
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku23:
+   env:
+     id: ku23
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku24:
+   env:
+     id: ku24
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku25:
+   env:
+     id: ku25
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku26:
+   env:
+     id: ku26
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku27:
+   env:
+     id: ku27
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku28:
+   env:
+     id: ku28
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku29:
+   env:
+     id: ku29
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku30:
+   env:
+     id: ku30
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku31:
+   env:
+     id: ku31
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku32:
+   env:
+     id: ku32
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku33:
+   env:
+     id: ku33
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku34:
+   env:
+     id: ku34
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku35:
+   env:
+     id: ku35
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku36:
+   env:
+     id: ku36
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku37:
+   env:
+     id: ku37
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku38:
+   env:
+     id: ku38
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku39:
+   env:
+     id: ku39
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku40:
+   env:
+     id: ku40
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku41:
+   env:
+     id: ku41
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku42:
+   env:
+     id: ku42
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku43:
+   env:
+     id: ku43
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku44:
+   env:
+     id: ku44
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku45:
+   env:
+     id: ku45
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku46:
+   env:
+     id: ku46
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku47:
+   env:
+     id: ku47
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku48:
+   env:
+     id: ku48
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku49:
+   env:
+     id: ku49
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
+  crawl_ku50:
+   env:
+     id: ku50
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [ "3.8" ]
+   steps:
+     - name: checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{github.ref }}
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v3
+       with:
+         python-version: ${{ matrix.python-version }}
+     - name: Install dependencies
+      run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
+     - name: crawl feed
+       working-directory: ./
+       run: python main.py -i $id
+     - name: Upload crawl data to artifact
+       uses: actions/upload-artifact@v4
+       with:
+         name: ${{ env.id }}_data
+         path: ${{ env.id }}.json
+
