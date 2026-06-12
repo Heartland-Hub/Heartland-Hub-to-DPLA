@@ -4,6 +4,8 @@ from record import Record, OAIRecordException
 import time
 import sys
 import utils
+import os
+import tempfile
 
 
 class OAI:
@@ -11,12 +13,55 @@ class OAI:
         self.url = institution.url
         self.id = institution.id
         self.id_prefix = institution.id_prefix
+        # proxy-mode can be set on the institution (e.g. "fixed"). Prepare
+        # proxy-related request kwargs before any network calls so initial
+        # Identify / ListMetadataFormats requests go through the proxy too.
+        self.proxy_mode = getattr(institution, 'proxy_mode', None)
+        self.requests_kwargs = {}
+        if self.proxy_mode and str(self.proxy_mode).lower() == 'fixed':
+            self._setup_proxy()
+
         self.name = institution.name or self.get_institution_name()
         self.metadata_prefix = self.get_metadata_prefix()
         self.include = institution.include
         self.exclude = institution.exclude
         self.hub = institution.hub
         self.skipped_record_messages = {}
+
+    def _setup_proxy(self):
+        proxy_url = os.environ.get('HHUB_PROXY_URL')
+        if not proxy_url:
+            return
+        # Configure proxies for requests
+        self.requests_kwargs['proxies'] = {
+            'http': proxy_url,
+            'https': proxy_url
+        }
+
+        # If CA and client cert/key are provided, write them to temp files
+        ca = os.environ.get('HHUB_PROXY_CA')
+        cert = os.environ.get('HHUB_PROXY_CLIENT_CERT')
+        key = os.environ.get('HHUB_PROXY_CLIENT_KEY')
+
+        # write files only when provided
+        if ca:
+            ca_f = tempfile.NamedTemporaryFile(delete=False, mode='w')
+            ca_f.write(ca)
+            ca_f.flush()
+            ca_f.close()
+            self.requests_kwargs['verify'] = ca_f.name
+
+        if cert and key:
+            cert_f = tempfile.NamedTemporaryFile(delete=False, mode='w')
+            cert_f.write(cert)
+            cert_f.flush()
+            cert_f.close()
+            key_f = tempfile.NamedTemporaryFile(delete=False, mode='w')
+            key_f.write(key)
+            key_f.flush()
+            key_f.close()
+            # requests accepts a tuple (cert_file, key_file)
+            self.requests_kwargs['cert'] = (cert_f.name, key_f.name)
 
     def print_info(self):
         print(f"Institution name: {self.name}")
@@ -35,7 +80,7 @@ class OAI:
             "verb": verb
         }
         try:
-            res = requests.get(self.url, params=params)
+            res = requests.get(self.url, params=params, **self.requests_kwargs)
         except requests.exceptions.MissingSchema as e:
             return False
         soup = BeautifulSoup(res.content, 'html.parser')
@@ -148,7 +193,8 @@ class OAI:
             sys.stdout.flush()
             # Some feeds are touchy about requesting too fast, so we pause for 5 seconds if a request error is encountered.
             try:
-                res = requests.get(url, params=params, timeout=30)
+                # include proxy/cert/verify kwargs when applicable
+                res = requests.get(url, params=params, timeout=30, **self.requests_kwargs)
             except (requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout) as e:
                 timeouts += 1
                 print("\nRequest timed out. Waiting 5 seconds and trying again. Attempt {}".format(timeouts))

@@ -32,8 +32,7 @@ def main():
             continue
 
         if institution.id == 'mhm':
-            # Missouri History Museum provides a data dump feed instead of an OAI feed
-            data = requests.get(institution.url, verify=False).json()
+            # Missouri History Museum provides a data dump feed instead of an OAI feed        data = requests.get(institution.url, verify=False).json()
             metadata = data['records']
             skipped = 0
             utils.write_file("files/institutions/", metadata, institution.id, institution.name, 0, {})

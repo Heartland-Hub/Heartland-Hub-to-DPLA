@@ -68,6 +68,7 @@ class Institution:
         self.exclude: list = institution_data['exclude'] if 'exclude' in institution_data else []
         self.id_prefix: str = self.generate_id_prefix()
         self.preferred_metadata_prefix: str = institution_data['metadata_prefix'] if 'metadata_prefix' in institution_data else None
+        self.proxy_mode: str = institution_data['proxy-mode'] if 'proxy-mode' in institution_data else None
         # self.oai = OAI(self)
         # self.metadata_prefixes = self.oai.get_metadata_prefixes()
 
