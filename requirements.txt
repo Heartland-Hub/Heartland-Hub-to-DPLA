@@ -1,16 +1,18 @@
-beautifulsoup4==4.9.3
-certifi==2020.12.5
-chardet==4.0.0
-idna==2.10
-iso-639==0.4.5
-# numpy==1.26.0
-pandas==1.2.4
-python-dateutil==2.8.1
-pytz==2021.1
-requests==2.25.1
-six==1.16.0
-soupsieve==2.2.1
-urllib3==1.26.5
-boto3~=1.24.15
-progressbar~=2.5
-python-dotenv==0.21.0
+beautifulsoup4
+certifi
+chardet
+idna
+iso-639
+numpy
+# pandas==1.2.4
+pandas
+python-dateutil
+pytz
+requests
+six
+soupsieve
+#urllib3==2.6.0
+urllib3
+boto3
+progressbar
+python-dotenv

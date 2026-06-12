@@ -75,5 +75,6 @@ map_list = {
     "ku50": ku,
     "ku51": ku,
     "ku52": ku,
-    "ku53": ku
+    "ku53": ku,
+    "uiowa": uiowa
 }

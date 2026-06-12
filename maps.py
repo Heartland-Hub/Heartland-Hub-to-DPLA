@@ -98,3 +98,11 @@ def ku(metadata):
             break
     thumbnail = metadata["identifier.thumbnail"][0] if "identifier.thumbnail" in metadata else ""
     return url, thumbnail, ""
+
+def uiowa(metadata):
+    for identifier in metadata['identifier']:
+        if identifier[0:30] == 'https://digital.lib.uiowa.edu':
+            url = identifier
+            break
+    thumbnail = metadata["identifier.thumbnail"][0] if "identifier.thumbnail" in metadata else ""
+    return url, thumbnail, ""
