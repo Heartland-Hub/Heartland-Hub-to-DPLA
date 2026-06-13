@@ -79,8 +79,12 @@ class OAI:
         params = {
             "verb": verb
         }
+
+        headers = {
+            "User-Agent": "Mozilla/5.0"
+        } 
         try:
-            res = requests.get(self.url, params=params, **self.requests_kwargs)
+            res = requests.get(self.url, params=params, headers=headers, **self.requests_kwargs)
         except requests.exceptions.MissingSchema as e:
             return False
         soup = BeautifulSoup(res.content, 'html.parser')

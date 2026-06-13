@@ -26,10 +26,10 @@ def kcpl2(metadata):
     return url, thumbnail, ""
 
 
-def um(metadata):
-    url = f"https://dl.mospace.umsystem.edu/{metadata['institution_id']}/islandora/object/{metadata['identifier'][0]}"
-    thumbnail = metadata["identifier.thumbnail"][0] if "identifier.thumbnail" in metadata else ""
-    return url, thumbnail, ""
+#def um(metadata):
+#    url = f"https://dl.mospace.umsystem.edu/{metadata['institution_id']}/islandora/object/{metadata['identifier'][0]}"
+#    thumbnail = metadata["identifier.thumbnail"][0] if "identifier.thumbnail" in metadata else ""
+#    return url, thumbnail, ""
 
 
 def wustl1(metadata):
@@ -101,7 +101,31 @@ def ku(metadata):
 
 def uiowa(metadata):
     for identifier in metadata['identifier']:
-        if identifier[0:30] == 'https://digital.lib.uiowa.edu':
+        if identifier[0:29] == 'https://digital.lib.uiowa.edu':
+            url = identifier
+            break
+    thumbnail = metadata["identifier.thumbnail"][0] if "identifier.thumbnail" in metadata else ""
+    return url, thumbnail, ""
+
+def mizzou(metadata):
+    for identifier in metadata['identifier']:
+        if identifier[0:36] == 'https://digital.library.missouri.edu':
+            url = identifier
+            break
+    thumbnail = metadata["identifier.thumbnail"][0] if "identifier.thumbnail" in metadata else ""
+    return url, thumbnail, ""
+
+def umkc(metadata):
+    for identifier in metadata['identifier']:
+        if identifier[0:32] == 'https://digital.library.umkc.edu':
+            url = identifier
+            break
+    thumbnail = metadata["identifier.thumbnail"][0] if "identifier.thumbnail" in metadata else ""
+    return url, thumbnail, ""
+
+def umsl(metadata):
+    for identifier in metadata['identifier']:
+        if identifier[0:32] == 'https://digital.library.umsl.edu':
             url = identifier
             break
     thumbnail = metadata["identifier.thumbnail"][0] if "identifier.thumbnail" in metadata else ""

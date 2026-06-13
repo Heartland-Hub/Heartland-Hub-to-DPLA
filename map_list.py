@@ -5,12 +5,12 @@ map_list = {
     "msu": cdm,
     "kcpl1": kcpl1,
     "kcpl2": kcpl2,
-    "umkc": um,
+    "umkc": umkc,
     "stlpl": cdm,
     "shsm": cdm,
     "mdh": cdm,
     "slu": cdm,
-    "umsl": um,
+    "umsl": umsl,
     "sgcl": cdm,
     "wustl1": wustl1,
     "wustl2": wustl2,
@@ -76,5 +76,6 @@ map_list = {
     "ku51": ku,
     "ku52": ku,
     "ku53": ku,
-    "uiowa": uiowa
+    "uiowa": uiowa,
+    "mizzou": mizzou
 }
