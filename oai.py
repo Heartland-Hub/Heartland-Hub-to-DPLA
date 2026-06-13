@@ -30,7 +30,7 @@ class OAI:
 
     def _setup_proxy(self):
         proxy_url = os.environ.get('HHUB_PROXY_URL')
-        print("Proxying through URL: " + proxyurl)
+        print("Proxying through URL: " + proxy_url)
         if not proxy_url:
             print("No proxy URL")
             return
