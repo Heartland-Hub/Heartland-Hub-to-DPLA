@@ -60,6 +60,12 @@ for institution in institutions_data:
         {
             'name': 'Crawl feed',
             'working-directory': './',
+            'env': {
+                'HHUB_PROXY_URL': '${{ secrets.HHUB_PROXY_URL }}',
+                'HHUB_PROXY_CLIENT_CERT': '${{ secrets.HHUB_PROXY_CLIENT_CERT }}',
+                'HHUB_PROXY_CLIENT_KEY': '${{ secrets.HHUB_PROXY_CLIENT_KEY }}',
+                'HHUB_PROXY_CA': '${{ secrets.HHUB_PROXY_CA }}'
+            },
             'run': 'python main.py -i $id'
         },
         {
