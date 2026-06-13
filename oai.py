@@ -41,6 +41,7 @@ class OAI:
         # If CA and client cert/key are provided, write them to temp files
         ca = os.environ.get('HHUB_PROXY_CA')
         cert = os.environ.get('HHUB_PROXY_CLIENT_CERT')
+        print(cert)
         key = os.environ.get('HHUB_PROXY_CLIENT_KEY')
 
         # write files only when provided
