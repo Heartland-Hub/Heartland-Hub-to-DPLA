@@ -178,7 +178,7 @@
         "institution": "Grinnell College",
         "id": "grinnell",
         "@id_prefix": "iowa--grinnell:oai:digital.grinnell.edu/oai2",
-        "url": "https://libweb.grinnell.edu/oai/", 
+        "url": "https://grinnell.alma.exlibrisgroup.com/view/oai/01GCL_INST/request", 
 	"metadata_prefix": "oai_dc",
         "include": ["DG"],
         "hub": "iowa",
