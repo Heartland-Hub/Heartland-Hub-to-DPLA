@@ -39,7 +39,8 @@
         "metadata_prefix": "oai_dc",
         "include": null,
         "exclude": [],
-        "hub": "mohub"
+        "hub": "mohub",
+	"proxy-mode": "fixed"
     },
     {
         "institution": "State Historical Society of Missouri",
