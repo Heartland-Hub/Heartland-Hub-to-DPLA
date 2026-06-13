@@ -30,7 +30,9 @@ class OAI:
 
     def _setup_proxy(self):
         proxy_url = os.environ.get('HHUB_PROXY_URL')
+        print("Proxying through URL: " + proxyurl)
         if not proxy_url:
+            print("No proxy URL")
             return
         # Configure proxies for requests
         self.requests_kwargs['proxies'] = {
@@ -41,7 +43,6 @@ class OAI:
         # If CA and client cert/key are provided, write them to temp files
         ca = os.environ.get('HHUB_PROXY_CA')
         cert = os.environ.get('HHUB_PROXY_CLIENT_CERT')
-        print(cert)
         key = os.environ.get('HHUB_PROXY_CLIENT_KEY')
 
         # write files only when provided
