@@ -17,8 +17,7 @@
         "metadata_prefix": "oai_dc",
         "include": null,
         "exclude": ["JohnsonLib"],
-        "hub": "mohub",
-		"proxy-mode": "fixed"
+        "hub": "mohub"
     },
     {
         "institution": "University of Missouri - Kansas City",
@@ -39,8 +38,7 @@
         "metadata_prefix": "oai_dc",
         "include": null,
         "exclude": [],
-        "hub": "mohub",
-		"proxy-mode": "fixed"
+        "hub": "mohub"
     },
     {
         "institution": "State Historical Society of Missouri",
@@ -50,8 +48,7 @@
         "metadata_prefix": "oai_dc",
         "include": null,
         "exclude": [],
-        "hub": "mohub",
-		"proxy-mode": "fixed"
+        "hub": "mohub"
     },
     {
         "institution": "Missouri Digital Heritage",
@@ -61,8 +58,7 @@
         "metadata_prefix": "oai_dc",
         "include": null,
         "exclude": [],
-        "hub": "mohub",
-		"proxy-mode": "fixed"
+        "hub": "mohub"
     },
     {
         "institution": "Saint Louis University",
@@ -72,8 +68,7 @@
         "metadata_prefix": "oai_dc",
         "include": null,
         "exclude": ["exorcism", "licenses"],
-        "hub": "mohub",
-		"proxy-mode": "fixed"
+        "hub": "mohub"
     },
     {
         "institution": "University of Missouri - Saint Louis",
@@ -94,8 +89,7 @@
         "metadata_prefix": "oai_dc",
         "include": null,
         "exclude": [],
-        "hub": "mohub",
-		"proxy-mode": "fixed"
+        "hub": "mohub"
     },
     {
         "institution": "Washington University in Saint Louis",
@@ -135,8 +129,7 @@
         "metadata_prefix": "oai_dc",
         "include": [2],
         "exclude": [],
-        "hub": "mohub",
-		"proxy-mode": "fixed"
+        "hub": "mohub"
     },
         {
         "institution": "St. Louis County Library",
@@ -146,8 +139,7 @@
         "metadata_prefix": "oai_dc",
         "include": [5],
         "exclude": [],
-        "hub": "mohub",
-		"proxy-mode": "fixed"
+        "hub": "mohub"
     },
         {
         "institution": "St. Louis County Library",
@@ -157,8 +149,7 @@
         "metadata_prefix": "oai_dc",
         "include": [10],
         "exclude": [],
-        "hub": "mohub",
-		"proxy-mode": "fixed"
+        "hub": "mohub"
     },
         {
         "institution": "St. Louis County Library",
@@ -168,16 +159,14 @@
         "metadata_prefix": "oai_dc",
         "include": [32],
         "exclude": [],
-        "hub": "mohub",
-		"proxy-mode": "fixed"
+        "hub": "mohub"
     },
     {
         "institution": "Drake University",
         "id": "drake",
         "@id_prefix": "iowa--drake:oai:cdm16331.contentdm.oclc.org",
         "url": "https://cdm16331.contentdm.oclc.org/oai/oai.php",
-        "hub": "iowa",
-		"proxy-mode": "fixed"
+        "hub": "iowa"
     },
     {
         "institution": "Grinnell College",
