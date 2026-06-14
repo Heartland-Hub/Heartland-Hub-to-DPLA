@@ -141,7 +141,7 @@ jobs:
           pip install -r requirements.txt
       - name: crawl feed
         working-directory: ./
-        with:
+        env:
           HHUB_PROXY_URL: ${{ secrets.HHUB_PROXY_URL }}
           HHUB_PROXY_CA: ${{ secrets.HHUB_PROXY_CA }}
           HHUB_PROXY_CLIENT_CERT: ${{ secrets.HHUB_PROXY_CLIENT_CERT }}
@@ -262,7 +262,7 @@ jobs:
           pip install -r requirements.txt
       - name: crawl feed
         working-directory: ./
-        with:
+        env:
           HHUB_PROXY_URL: ${{ secrets.HHUB_PROXY_URL }}
           HHUB_PROXY_CA: ${{ secrets.HHUB_PROXY_CA }}
           HHUB_PROXY_CLIENT_CERT: ${{ secrets.HHUB_PROXY_CLIENT_CERT }}
@@ -2264,7 +2264,7 @@ jobs:
           pip install -r requirements.txt
       - name: crawl feed
         working-directory: ./
-        with:
+        env:
           HHUB_PROXY_URL: ${{ secrets.HHUB_PROXY_URL }}
           HHUB_PROXY_CA: ${{ secrets.HHUB_PROXY_CA }}
           HHUB_PROXY_CLIENT_CERT: ${{ secrets.HHUB_PROXY_CLIENT_CERT }}
