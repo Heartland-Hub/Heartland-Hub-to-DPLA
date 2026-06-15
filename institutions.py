@@ -9,7 +9,9 @@ import json
         "url": // url to the root OAI endpoint, or data dump,
         "metadata_prefix": // metadata prefix for OAI feed, to be used in constructing the OAI query. If set to 'data_dump', URL assumed to be downloaded as-is,
         "include": // array listing collection names to be included in crawl. If set, only collections listed will be included, otherwise all collections assumed to be included,
-        "exclude": // array listing collection names to be excluded in crawl. If set, all but listed collections will be excluded
+        "exclude": // array listing collection names to be excluded in crawl. If set, all but listed collections will be excluded,
+        "proxy-mode": // "fixed" if the institution requires harvesting to go through a single, fixed, whitelisted IP address,
+        "proxy-prefix": // If proxy-mode is "fixed," contains the string to insert between the proxy server URL and the OAI request to route the request to the correct institution. Must match the configuration on the proxy server.
     }
 """
 
@@ -69,6 +71,7 @@ class Institution:
         self.id_prefix: str = self.generate_id_prefix()
         self.preferred_metadata_prefix: str = institution_data['metadata_prefix'] if 'metadata_prefix' in institution_data else None
         self.proxy_mode: str = institution_data['proxy-mode'] if 'proxy-mode' in institution_data else None
+        self.proxy_prefix: str = institution_data['proxy-prefix'] if 'proxy-prefix' in institution_data else None
         # self.oai = OAI(self)
         # self.metadata_prefixes = self.oai.get_metadata_prefixes()
 

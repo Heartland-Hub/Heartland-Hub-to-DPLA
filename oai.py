@@ -20,7 +20,7 @@ class OAI:
         self.requests_kwargs = {}
         if self.proxy_mode and str(self.proxy_mode).lower() == 'fixed':
             self._setup_proxy()
-
+        self.proxy_prefix = getattr(institution, 'proxy_prefix', None)
         self.name = institution.name or self.get_institution_name()
         self.metadata_prefix = self.get_metadata_prefix()
         self.include = institution.include
@@ -34,11 +34,6 @@ class OAI:
         if not proxy_url:
             print("No proxy URL")
             return
-        # Configure proxies for requests
-        self.requests_kwargs['proxies'] = {
-            'http': proxy_url,
-            'https': proxy_url
-        }
 
         # If CA and client cert/key are provided, write them to temp files
         ca = os.environ.get('HHUB_PROXY_CA')
@@ -85,6 +80,8 @@ class OAI:
         headers = {
             "User-Agent": "Mozilla/5.0"
         } 
+        if self.proxy_mode == "fixed":
+            self.url = proxy_url + self.proxy_prefix
         try:
             res = requests.get(self.url, params=params, headers=headers, **self.requests_kwargs)
         except requests.exceptions.MissingSchema as e:
