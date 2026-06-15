@@ -83,9 +83,11 @@ class OAI:
         } 
         if self.proxy_mode == "fixed":    
             proxy_url = os.environ.get('HHUB_PROXY_URL')
-            self.url = proxy_url + "/" + self.proxy_prefix + "/"
+            request_url = proxy_url + "/" + self.proxy_prefix + "/"
+        else:
+            request_url = self.url
         try:
-            res = requests.get(self.url, params=params, headers=headers, **self.requests_kwargs)
+            res = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs)
         except requests.exceptions.MissingSchema as e:
             return False
         soup = BeautifulSoup(res.content, 'html.parser')
@@ -175,7 +177,7 @@ class OAI:
         print(f"{self.name} ({self.id})")
         print(self.id)
         out = []
-        url = self.url
+        #url = self.url
         metadata_prefix = self.metadata_prefix
         resumption_token = True
         records = True
@@ -193,6 +195,12 @@ class OAI:
         if self.include:
             params["set"] = self.include
 
+        if self.proxy_mode == "fixed":    
+            proxy_url = os.environ.get('HHUB_PROXY_URL')
+            url = proxy_url + "/" + self.proxy_prefix + "/"
+        else:
+            url = self.url
+        
         timeouts = 0
         server_errors = 0
         skipped = 0
