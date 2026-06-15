@@ -4,7 +4,7 @@ import utils
 from map_list import map_list
 import sys
 import html
-
+import re
 
 class Record:
     def __init__(self, record, decorators):

@@ -78,7 +78,8 @@ class OAI:
         }
 
         headers = {
-            "User-Agent": "Mozilla/5.0"
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/xml,text/xml,*/*"
         } 
         if self.proxy_mode == "fixed":
             self.url = proxy_url + self.proxy_prefix
@@ -181,6 +182,12 @@ class OAI:
             "verb": "ListRecords",
             "metadataPrefix": self.metadata_prefix
         }
+
+        headers = {
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/xml,text/xml,*/*"
+        } 
+        
         # TODO: If Include is a list it needs to be iterated through
         if self.include:
             params["set"] = self.include
@@ -197,7 +204,7 @@ class OAI:
             # Some feeds are touchy about requesting too fast, so we pause for 5 seconds if a request error is encountered.
             try:
                 # include proxy/cert/verify kwargs when applicable
-                res = requests.get(url, params=params, timeout=30, **self.requests_kwargs)
+                res = requests.get(url, params=params, headers=headers, timeout=30, **self.requests_kwargs)
             except (requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout) as e:
                 timeouts += 1
                 print("\nRequest timed out. Waiting 5 seconds and trying again. Attempt {}".format(timeouts))
@@ -221,7 +228,6 @@ class OAI:
                 del params['metadataPrefix']
             if 'set' in params:
                 del params['set']
-
             soup = BeautifulSoup(res.content, 'html.parser')
 
             records = soup.find_all('record')
