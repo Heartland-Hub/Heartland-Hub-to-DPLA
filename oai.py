@@ -83,7 +83,7 @@ class OAI:
         } 
         if self.proxy_mode == "fixed":    
             proxy_url = os.environ.get('HHUB_PROXY_URL')
-            self.url = proxy_url + self.proxy_prefix
+            self.url = proxy_url + "/" + self.proxy_prefix + "/"
         try:
             res = requests.get(self.url, params=params, headers=headers, **self.requests_kwargs)
         except requests.exceptions.MissingSchema as e:
