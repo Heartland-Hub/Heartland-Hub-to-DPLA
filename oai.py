@@ -81,7 +81,8 @@ class OAI:
                 "User-Agent": "Mozilla/5.0",
                 "Accept": "application/xml,text/xml,*/*"
         } 
-        if self.proxy_mode == "fixed":
+        if self.proxy_mode == "fixed":    
+            proxy_url = os.environ.get('HHUB_PROXY_URL')
             self.url = proxy_url + self.proxy_prefix
         try:
             res = requests.get(self.url, params=params, headers=headers, **self.requests_kwargs)
