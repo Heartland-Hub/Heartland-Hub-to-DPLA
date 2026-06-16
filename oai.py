@@ -101,7 +101,8 @@ class OAI:
             raise Exception("Missing schema error for: {}".format(self.url))
 
         metadata_prefixes = [m.getText() for m in soup.find_all('metadataprefix')]
-
+        if not metadata_prefixes:
+            print(soup)
         return metadata_prefixes
 
     def get_metadata_prefix(self):
