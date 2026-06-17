@@ -171,6 +171,8 @@ class Record:
         """
 
         row = {}
+        if not element:
+            return
         if not element.findChildren(recursive=False):
             return [html.unescape(element.getText().strip())]
         for el in element.findChildren(recursive=False):
