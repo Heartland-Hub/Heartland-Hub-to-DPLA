@@ -116,7 +116,7 @@ class Record:
                 pattern = re.compile("^[^A-Z]*$")
                 if "title" in self.parsed_metadata.keys():
                     if pattern.search(self.parsed_metadata["title"][0]):
-                        metadata = None
+                        metadata["title"]=""
 
         if not metadata:
             return False
