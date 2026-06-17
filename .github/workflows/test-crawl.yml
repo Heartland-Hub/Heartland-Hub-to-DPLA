@@ -3,40 +3,6 @@ name: Crawl Selected Heartland Hub Institutions
 on: workflow_dispatch
 
 jobs:
-  crawl_umsl:
-    env:
-      id: umsl
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [ "3.8" ]
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.ref }}
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v3
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-      - name: crawl feed
-        working-directory: ./
-        env:
-          HHUB_PROXY_URL: ${{ secrets.HHUB_PROXY_URL }}
-          HHUB_PROXY_CA: ${{ secrets.HHUB_PROXY_CA }}
-          HHUB_PROXY_CLIENT_CERT: ${{ secrets.HHUB_PROXY_CLIENT_CERT }}
-          HHUB_PROXY_CLIENT_KEY: ${{ secrets.HHUB_PROXY_CLIENT_KEY }}
-        run: python main.py -i $id
-      - name: Upload crawl data to artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ env.id }}_data
-          path: ${{ env.id }}.json
-
   crawl_uiowa:
     env:
       id: uiowa
