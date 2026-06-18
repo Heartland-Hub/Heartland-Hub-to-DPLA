@@ -116,10 +116,7 @@ class Record:
                 pattern = re.compile("^[^A-Z]*$")
                 if "title" in self.parsed_metadata.keys():
                     if pattern.search(self.parsed_metadata["title"][0]):
-                        metadata["title"]=""
-
-        if not metadata:
-            return False
+                        raise OAIRecordException('Invalid title', self.record)
 
         out_row = self.map_to_dpla(metadata, dpla_row)
 
@@ -215,6 +212,8 @@ class Record:
     def get_urls(self, type="main"):
         institution_id = self.institution_id
         metadata = self.parsed_metadata
+        if not metadata:
+            raise OAIRecordException('Metadata not found')
         header = self.parsed_header
         metadata['institution_id'] = institution_id
         metadata['header'] = header
