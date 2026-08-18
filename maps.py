@@ -15,8 +15,8 @@ def frb(metadata):
 
 
 def kcpl1(metadata):
-    url = metadata["relation"][0]
-    thumbnail = ""
+    url = metadata["identifier"][1]
+    thumbnail = metadata["identifier"][2]
     return url, thumbnail, ""
 
 
@@ -129,4 +129,15 @@ def umsl(metadata):
             url = identifier
             break
     thumbnail = metadata["identifier.thumbnail"][0] if "identifier.thumbnail" in metadata else ""
+    return url, thumbnail, ""
+
+def isu(metadata):
+    url = ''
+    thumbnail = ''
+    for identifier in metadata['identifier']:
+        if identifier[0:21] == 'https://n2t.net/ark:/':
+            url = identifier
+            break
+        if '\/thumbs\/' in identifier:
+            thumbnail = identifier
     return url, thumbnail, ""

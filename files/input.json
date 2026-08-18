@@ -189,6 +189,30 @@
         "exclude": [],
         "hub": "iowa"
     },
+    {
+        "institution": "Kansas City Public Library",
+        "id": "kcpl1",
+        "@id_prefix": "urn:data.mohistory.org:oai:kcpl",
+        "url": "https://oai.quartexcollections.com/kchistory/oai2",
+        "exclude": [],
+        "hub": "mohub"
+    },
+    {
+        "institution": "Kansas City Public Library",
+        "id": "kcpl2",
+        "url": "https://pendergastkc.org/oai/request",
+        "@id_prefix": "urn:data.mohistory.org:oai:kcpl",
+        "exclude": [],
+        "hub": "mohub"
+    },
+    {	
+	"institution": "Iowa State University",
+	"id": "isu",
+	"url": "https://oai.digitalcollections.lib.iastate.edu/",
+	"exclude": [],
+	"hub": "iowa"
+    },
+
 	{
 		"institution": "University of Kansas Libraries", 
 		"id": "ku1", 
