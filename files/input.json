@@ -117,7 +117,7 @@
         "institution": "Missouri History Museum",
         "id": "mhm",
         "@id_prefix": "",
-        "url": "https://api.mohistory.org/static/dpla.json",
+        "url": "https://45.55.43.173/mhm/static/data.json",
         "metadata_prefix": "data_dump",
         "include": [],
         "exclude": [],
