@@ -77,10 +77,16 @@ class OAI:
             "verb": verb
         }
 
-        headers = {
+        if self.id == "frb":
+            headers = {
                 "User-Agent": "Heartland Hub Harvesting Bot",
                 "Accept": "application/xml,text/xml,*/*"
-        } 
+            } 
+        else:
+            headers = {
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/xml,text/xml,*/*"
+            }
         if self.proxy_mode == "fixed":    
             proxy_url = os.environ.get('HHUB_PROXY_URL')
             request_url = proxy_url + "/" + self.proxy_prefix + "/"
@@ -187,10 +193,16 @@ class OAI:
             "metadataPrefix": self.metadata_prefix
         }
 
-        headers = {
+        if self.id == "frb":
+            headers = {
                 "User-Agent": "Heartland Hub Harvesting Bot",
                 "Accept": "application/xml,text/xml,*/*"
-        } 
+            } 
+        else:
+            headers = {
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/xml,text/xml,*/*"
+            }
         
         # TODO: If Include is a list it needs to be iterated through
         if self.include:
