@@ -92,6 +92,15 @@ class OAI:
             request_url = proxy_url + "/" + self.proxy_prefix + "/"
         else:
             request_url = self.url
+        
+        if institution.id == 'mhm':
+            # Missouri History Museum provides a data dump feed instead of an OAI feed        
+            data = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs).json()
+            metadata = data['records']
+            skipped = 0
+            utils.write_file("files/institutions/", metadata, institution.id, institution.name, 0, {})
+            return False
+        
         try:
             res = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs)
         except requests.exceptions.MissingSchema as e:
