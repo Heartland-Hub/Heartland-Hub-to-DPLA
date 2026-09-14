@@ -93,7 +93,7 @@ class OAI:
         else:
             request_url = self.url
         
-        if institution.id == 'mhm':
+        if self.id == 'mhm':
             # Missouri History Museum provides a data dump feed instead of an OAI feed        
             data = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs).json()
             metadata = data['records']
