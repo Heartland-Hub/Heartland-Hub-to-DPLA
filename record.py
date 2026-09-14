@@ -132,13 +132,13 @@ class Record:
         # Conditional fields, not necessarily in every record
         if "rights" in metadata:
             dpla_row["rights"] = metadata["rights"]
-        elif "rights" in metadata["sourceResource"]
+        elif "rights" in metadata["sourceResource"]:
             dpla_row["rights"] = metadata["sourceResource"]["rights"]
             del dpla_row["sourceResource"]["rights"]
 
         if "rightsCategory" in metadata:
             dpla_row["rightsCategory"] = metadata["rightsCategory"]
-        elif "rightsCategory" in metadata["sourceResource"]
+        elif "rightsCategory" in metadata["sourceResource"]:
             dpla_row["rightsCategory"] = metadata["sourceResource"]["rightsCategory"]
             del dpla_row["sourceResource"]["rightsCategory"]
         
