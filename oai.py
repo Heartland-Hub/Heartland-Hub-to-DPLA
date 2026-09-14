@@ -188,7 +188,7 @@ class OAI:
         }
 
         headers = {
-                "User-Agent": "Mozilla/5.0",
+                "User-Agent": "Heartland Hub Harvesting Bot",
                 "Accept": "application/xml,text/xml,*/*"
         } 
         
