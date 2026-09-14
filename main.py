@@ -31,13 +31,6 @@ def main():
             print("{} has been crawled in less than {} hours, continuing.".format(institution.id, args.crawl_time))
             continue
 
-        if institution.id == 'mhm':
-            # Missouri History Museum provides a data dump feed instead of an OAI feed        
-            data = requests.get(institution.url, verify=False).json()
-            metadata = data['records']
-            skipped = 0
-            utils.write_file("files/institutions/", metadata, institution.id, institution.name, 0, {})
-
         else:
             # Create OAI object based on input data
             feed = OAI(institution)
