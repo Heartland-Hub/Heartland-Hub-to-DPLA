@@ -36,7 +36,3 @@ jobs:
         with:
           name: ${{ env.id }}_data
           path: ${{ env.id }}.json
-
-        with:
-          name: ${{ env.id }}_data
-          path: ${{ env.id }}.json
