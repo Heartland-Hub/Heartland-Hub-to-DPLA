@@ -111,7 +111,7 @@ class OAI:
 
     def get_metadata_prefixes(self):
       if self.id == 'mhm':
-          return = ['oai_dc']
+          metadata_prefixes = ['oai_dc']
       else:
         verb = "ListMetadataFormats"
         soup = self.oai_request(verb)
@@ -121,7 +121,7 @@ class OAI:
         metadata_prefixes = [m.getText() for m in soup.find_all('metadataprefix')]
         if not metadata_prefixes:
             print(soup)
-        return metadata_prefixes
+      return metadata_prefixes
 
     def get_metadata_prefix(self):
         """
