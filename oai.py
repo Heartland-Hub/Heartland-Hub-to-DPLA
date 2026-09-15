@@ -110,6 +110,9 @@ class OAI:
         return soup
 
     def get_metadata_prefixes(self):
+      if self.id == 'mhm':
+          return = ['oai_dc']
+      else:
         verb = "ListMetadataFormats"
         soup = self.oai_request(verb)
         if not soup:
