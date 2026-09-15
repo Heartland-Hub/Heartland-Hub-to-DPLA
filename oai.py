@@ -96,6 +96,8 @@ class OAI:
         if self.id == 'mhm':
             # Missouri History Museum provides a data dump feed instead of an OAI feed        
             data = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs).json()
+            print("Request URL: {request_url}")
+            print("HTTP Status Code: {data.status_code}")
             metadata = data['records']
             skipped = 0
             utils.write_file("files/institutions/", metadata, self.id, self.name, 0, {})
