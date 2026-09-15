@@ -98,8 +98,8 @@ class OAI:
             data = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs).json()
             metadata = data['records']
             skipped = 0
-            utils.write_file("files/institutions/", metadata, institution.id, institution.name, 0, {})
-            return False
+            utils.write_file("files/institutions/", metadata, self.id, self.name, 0, {})
+            return None
         
         try:
             res = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs)
