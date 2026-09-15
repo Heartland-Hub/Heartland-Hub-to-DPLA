@@ -213,7 +213,9 @@
         "url": "https://pendergastkc.org/oai/request",
         "@id_prefix": "urn:data.mohistory.org:oai:kcpl",
         "exclude": [],
-        "hub": "mohub"
+        "hub": "mohub",
+		"proxy-mode": "fixed",
+		"proxy-prefix": "kcpl2"
     },
     {	
 	"institution": "Iowa State University",
