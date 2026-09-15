@@ -93,16 +93,6 @@ class OAI:
         else:
             request_url = self.url
         
-        if self.id == 'mhm':
-            # Missouri History Museum provides a data dump feed instead of an OAI feed        
-            data = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs).json()
-            print("Request URL: {request_url}")
-            print("HTTP Status Code: {data.status_code}")
-            metadata = data['records']
-            skipped = 0
-            utils.write_file("files/institutions/", metadata, self.id, self.name, 0, {})
-            return None
-        
         try:
             res = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs)
         except requests.exceptions.MissingSchema as e:
@@ -197,6 +187,14 @@ class OAI:
         """
         print(f"{self.name} ({self.id})")
         print(self.id)
+        if self.id == 'mhm':
+            # Missouri History Museum provides a data dump feed instead of an OAI feed        
+            data = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs).json()
+            print("Request URL: {request_url}")
+            print("HTTP Status Code: {data.status_code}")
+            metadata = data['records']
+            skipped = 0
+            return metadata, skipped, self.skipped_record_messages
         out = []
         #url = self.url
         metadata_prefix = self.metadata_prefix
