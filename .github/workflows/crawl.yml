@@ -112,6 +112,11 @@ jobs:
           pip install -r requirements.txt
       - name: crawl feed
         working-directory: ./
+        env:
+          HHUB_PROXY_URL: ${{ secrets.HHUB_PROXY_URL }}
+          HHUB_PROXY_CA: ${{ secrets.HHUB_PROXY_CA }}
+          HHUB_PROXY_CLIENT_CERT: ${{ secrets.HHUB_PROXY_CLIENT_CERT }}
+          HHUB_PROXY_CLIENT_KEY: ${{ secrets.HHUB_PROXY_CLIENT_KEY }}
         run: python main.py -i $id
       - name: Upload crawl data to artifact
         uses: actions/upload-artifact@v4
@@ -412,6 +417,11 @@ jobs:
           pip install -r requirements.txt
       - name: crawl feed
         working-directory: ./
+        env:
+          HHUB_PROXY_URL: ${{ secrets.HHUB_PROXY_URL }}
+          HHUB_PROXY_CA: ${{ secrets.HHUB_PROXY_CA }}
+          HHUB_PROXY_CLIENT_CERT: ${{ secrets.HHUB_PROXY_CLIENT_CERT }}
+          HHUB_PROXY_CLIENT_KEY: ${{ secrets.HHUB_PROXY_CLIENT_KEY }}
         run: python main.py -i $id
       - name: Upload crawl data to artifact
         uses: actions/upload-artifact@v4
@@ -588,6 +598,11 @@ jobs:
           pip install -r requirements.txt
       - name: crawl feed
         working-directory: ./
+        env:
+          HHUB_PROXY_URL: ${{ secrets.HHUB_PROXY_URL }}
+          HHUB_PROXY_CA: ${{ secrets.HHUB_PROXY_CA }}
+          HHUB_PROXY_CLIENT_CERT: ${{ secrets.HHUB_PROXY_CLIENT_CERT }}
+          HHUB_PROXY_CLIENT_KEY: ${{ secrets.HHUB_PROXY_CLIENT_KEY }}
         run: python main.py -i $id
       - name: Upload crawl data to artifact
         uses: actions/upload-artifact@v4
@@ -617,6 +632,11 @@ jobs:
           pip install -r requirements.txt
       - name: crawl feed
         working-directory: ./
+        env:
+          HHUB_PROXY_URL: ${{ secrets.HHUB_PROXY_URL }}
+          HHUB_PROXY_CA: ${{ secrets.HHUB_PROXY_CA }}
+          HHUB_PROXY_CLIENT_CERT: ${{ secrets.HHUB_PROXY_CLIENT_CERT }}
+          HHUB_PROXY_CLIENT_KEY: ${{ secrets.HHUB_PROXY_CLIENT_KEY }}
         run: python main.py -i $id
       - name: Upload crawl data to artifact
         uses: actions/upload-artifact@v4
@@ -646,6 +666,11 @@ jobs:
           pip install -r requirements.txt
       - name: crawl feed
         working-directory: ./
+        env:
+          HHUB_PROXY_URL: ${{ secrets.HHUB_PROXY_URL }}
+          HHUB_PROXY_CA: ${{ secrets.HHUB_PROXY_CA }}
+          HHUB_PROXY_CLIENT_CERT: ${{ secrets.HHUB_PROXY_CLIENT_CERT }}
+          HHUB_PROXY_CLIENT_KEY: ${{ secrets.HHUB_PROXY_CLIENT_KEY }}
         run: python main.py -i $id
       - name: Upload crawl data to artifact
         uses: actions/upload-artifact@v4
@@ -675,6 +700,11 @@ jobs:
           pip install -r requirements.txt
       - name: crawl feed
         working-directory: ./
+        env:
+          HHUB_PROXY_URL: ${{ secrets.HHUB_PROXY_URL }}
+          HHUB_PROXY_CA: ${{ secrets.HHUB_PROXY_CA }}
+          HHUB_PROXY_CLIENT_CERT: ${{ secrets.HHUB_PROXY_CLIENT_CERT }}
+          HHUB_PROXY_CLIENT_KEY: ${{ secrets.HHUB_PROXY_CLIENT_KEY }}
         run: python main.py -i $id
       - name: Upload crawl data to artifact
         uses: actions/upload-artifact@v4
