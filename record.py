@@ -74,11 +74,11 @@ class Record:
             elif institution_id == "sgcl":
                 collection = self.parsed_header["identifier"][0].split(":")[-1].split("/")[0]
                 if collection == "p16792coll1":
-                    self.parsed_metadata["rights"] = "The Ozarks Genealogical Society, Inc. offers access to this collection for " \
+                    self.parsed_metadata["rights"] = ["The Ozarks Genealogical Society, Inc. offers access to this collection for " \
                                          "educational and personal research purposes only.  Materials within the collection " \
                                          "may be protected by the U.S. Copyright Law (Title 17, U.S.C.).  It is the " \
                                          "researcher's obligation to determine and satisfy copyright or other use restriction " \
-                                         "when publishing or otherwise distributing materials within the collection."
+                                         "when publishing or otherwise distributing materials within the collection."]
             elif institution_id == 'grinnell':
                 for k, v in dict(self.parsed_metadata).items():
                     if len(k.split("_")) > 1 and k.split("_")[1][:4] == 'http':
