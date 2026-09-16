@@ -103,7 +103,7 @@ class Record:
             elif institution_id == 'isu':
                 metadata["sourceResource"]["contributor"] = "Iowa State University. Digital Collections"
                 if "rights" in self.parsed_metadata.keys():
-                    for value in rights:
+                    for value in self.parsed_metadata["rights"]:
                         if value[0:23] == "http://rightsstatements":
                             metadata["rights"] = value
                         if value[0:23] != "http://rightsstatements":
