@@ -222,7 +222,7 @@ class OAI:
             # Missouri History Museum provides a data dump feed instead of an OAI feed        
             # data = requests.get(url, params=params, headers=headers, **self.requests_kwargs).json()
             data = requests.get(url, params=params, headers=headers, **self.requests_kwargs)
-            print("HTTP Status Code: {data.status_code}")
+            print(f"HTTP Status Code: {data.status_code}")
             if data.status_code == '403':
                 return False
             data = data.json()
