@@ -187,14 +187,6 @@ class OAI:
         """
         print(f"{self.name} ({self.id})")
         print(self.id)
-        if self.id == 'mhm':
-            # Missouri History Museum provides a data dump feed instead of an OAI feed        
-            data = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs).json()
-            print("Request URL: {request_url}")
-            print("HTTP Status Code: {data.status_code}")
-            metadata = data['records']
-            skipped = 0
-            return metadata, skipped, self.skipped_record_messages
         out = []
         #url = self.url
         metadata_prefix = self.metadata_prefix
@@ -225,6 +217,15 @@ class OAI:
             url = proxy_url + "/" + self.proxy_prefix + "/"
         else:
             url = self.url
+
+        if self.id == 'mhm':
+            # Missouri History Museum provides a data dump feed instead of an OAI feed        
+            data = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs).json()
+            print("Request URL: {request_url}")
+            print("HTTP Status Code: {data.status_code}")
+            metadata = data['records']
+            skipped = 0
+            return metadata, skipped, self.skipped_record_messages
         
         timeouts = 0
         server_errors = 0
