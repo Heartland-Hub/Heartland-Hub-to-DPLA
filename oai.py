@@ -224,7 +224,7 @@ class OAI:
             data = requests.get(url, params=params, headers=headers, **self.requests_kwargs)
             print("HTTP Status Code: {data.status_code}")
             if data.status_code == '403':
-                break
+                return False
             data = data.json()
             metadata = data['records']
             skipped = 0
