@@ -251,7 +251,7 @@ class OAI:
                 if self.id == 'sgcl' and timeouts == 10: 
                     print("\nRequest has timed out 10 times. Stopping harvest.")
                     break
-                elif timeouts == 5:
+                elif self.id != 'sgcl' and timeouts == 5:
                     print("\nRequest has timed out 5 times. Stopping harvest.")
                     break
                 continue
