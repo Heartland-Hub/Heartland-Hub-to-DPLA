@@ -102,12 +102,6 @@ class Record:
                 metadata["@id"] = "missouri--urn:data.mohistory.org:" + self.parsed_header["identifier"][0]
             elif institution_id == 'isu':
                 metadata["sourceResource"]["contributor"] = "Iowa State University. Digital Collections"
-                if "rights" in self.parsed_metadata.keys():
-                    for value in self.parsed_metadata["rights"]:
-                        if value[0:23] == "http://rightsstatements":
-                            metadata["rights"] = value
-                        if value[0:23] != "http://rightsstatements":
-                            metadata["sourceResource"]["rights"] = value
             elif institution_id in ['ku1', 'ku2', 'ku3', 'ku4', 'ku5', 'ku6', 'ku7', 'ku8', 'ku9', 'ku10', 'ku11', 'ku12', 'ku13', 'ku14', 'ku15', 'ku16', 'ku17', 'ku18', 'ku19', 'ku20', 'ku21', 'ku22', 'ku23', 'ku24', 'ku25', 'ku26', 'ku27', 'ku28', 'ku29', 'ku30', 'ku31', 'ku32', 'ku33', 'ku34', 'ku35', 'ku36', 'ku37', 'ku38', 'ku39', 'ku40', 'ku41', 'ku42', 'ku43', 'ku44', 'ku45', 'ku46', 'ku47', 'ku48', 'ku49', 'ku50', 'ku51', 'ku52', 'ku53']:
                 metadata["sourceResource"]["contributor"] = "University of Kansas Libraries"
             elif institution_id == 'uiowa':
@@ -115,6 +109,13 @@ class Record:
                 if "title" in self.parsed_metadata.keys():
                     if pattern.search(self.parsed_metadata["title"][0]):
                         raise OAIRecordException('Invalid title', self.record)
+            if institution_id in ['isu','shsm','slu','sgcl1','sgcl2','sgcl3','sgcl4']:
+                if "rights" in self.parsed_metadata.keys():
+                    for value in self.parsed_metadata["rights"]:
+                        if value[0:23] == "http://rightsstatements":
+                            metadata["rights"] = value
+                        if value[0:23] != "http://rightsstatements":
+                            metadata["sourceResource"]["rights"] += value
 
         out_row = self.map_to_dpla(metadata, dpla_row)
 
@@ -138,15 +139,9 @@ class Record:
         # Conditional fields, not necessarily in every record
         if "rights" in metadata:
             dpla_row["rights"] = metadata["rights"]
-        elif "rights" in metadata["sourceResource"]:
-            dpla_row["rights"] = metadata["sourceResource"]["rights"]
-            del dpla_row["sourceResource"]["rights"]
 
         if "rightsCategory" in metadata:
             dpla_row["rightsCategory"] = metadata["rightsCategory"]
-        elif "rightsCategory" in metadata["sourceResource"]:
-            dpla_row["rightsCategory"] = metadata["sourceResource"]["rightsCategory"]
-            del dpla_row["sourceResource"]["rightsCategory"]
         
         if "iiifManifest" in metadata:
             dpla_row["iiifManifest"] = metadata["iiifManifest"]
