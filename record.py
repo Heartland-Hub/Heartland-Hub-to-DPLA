@@ -109,7 +109,7 @@ class Record:
                 if "title" in self.parsed_metadata.keys():
                     if pattern.search(self.parsed_metadata["title"][0]):
                         raise OAIRecordException('Invalid title', self.record)
-            if institution_id in ['isu','shsm','slu','sgcl1','sgcl2','sgcl3','sgcl4']:
+            if institution_id in ['isu','shsm','slu','stlpl']:
                 if "rights" in self.parsed_metadata.keys():
                     for value in self.parsed_metadata["rights"]:
                         if value[0:23] == "http://rightsstatements":
