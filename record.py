@@ -115,7 +115,7 @@ class Record:
                         if value[0:23] == "http://rightsstatements":
                             metadata["rights"] = value
                         if value[0:23] != "http://rightsstatements":
-                            metadata["sourceResource"]["rights"] += value
+                            metadata["sourceResource"]["rights"] = value
 
         out_row = self.map_to_dpla(metadata, dpla_row)
 
