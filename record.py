@@ -115,7 +115,7 @@ class Record:
                         if value[0:23] == "http://rightsstatements":
                             metadata["rights"] = value
                         elif institution_id in ['isu','slu']: # St. Louis Public Library and the State Historical Society of Missouri do not have textual rights statements
-                            metadata["sourceResource"]["rights"] += value
+                            metadata["sourceResource"]["rights"] = value
                             
 
         out_row = self.map_to_dpla(metadata, dpla_row)
