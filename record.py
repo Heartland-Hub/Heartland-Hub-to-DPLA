@@ -109,14 +109,20 @@ class Record:
                 if "title" in self.parsed_metadata.keys():
                     if pattern.search(self.parsed_metadata["title"][0]):
                         raise OAIRecordException('Invalid title', self.record)
-            if institution_id in ['isu','shsm','slu','stlpl','kcpl2']:
+            if institution_id in ['isu','shsm','slu','stlpl']:
                 if "rights" in self.parsed_metadata.keys():
                     for value in self.parsed_metadata["rights"]:
                         if value[0:23] == "http://rightsstatements":
                             metadata["rights"] = value
-                        elif institution_id in ['isu','slu','kcpl2']: # These institutions do not have textual rights statements
+                        elif institution_id in ['isu','slu']: # These institutions do not have textual rights statements
                             metadata["sourceResource"]["rights"] = value
-                            
+            if institution_id == 'kcpl2':
+                if "rights" in self.parsed_metadata.keys():
+                    for value in self.parsed_metadata["rights"]:
+                        if value[0:24] == "https://rightsstatements":
+                            metadata["rights"] = value
+                        else:
+                            metadata["sourceResource"]["rights"] = value
 
         out_row = self.map_to_dpla(metadata, dpla_row)
 
