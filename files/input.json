@@ -222,7 +222,9 @@
 	"id": "isu",
 	"url": "https://oai.digitalcollections.lib.iastate.edu/",
 	"exclude": [],
-	"hub": "iowa"
+	"hub": "iowa",
+	"proxy-mode": "fixed",
+	"proxy-prefix": "isu"
     },
 
 	{
