@@ -109,12 +109,12 @@ class Record:
                 if "title" in self.parsed_metadata.keys():
                     if pattern.search(self.parsed_metadata["title"][0]):
                         raise OAIRecordException('Invalid title', self.record)
-            if institution_id in ['isu','shsm','slu','stlpl']:
+            if institution_id in ['isu','shsm','slu','stlpl','kcpl2']:
                 if "rights" in self.parsed_metadata.keys():
                     for value in self.parsed_metadata["rights"]:
                         if value[0:23] == "http://rightsstatements":
                             metadata["rights"] = value
-                        elif institution_id in ['isu','slu']: # St. Louis Public Library and the State Historical Society of Missouri do not have textual rights statements
+                        elif institution_id in ['isu','slu','kcpl2']: # These institutions do not have textual rights statements
                             metadata["sourceResource"]["rights"] = value
                             
 
