@@ -3,9 +3,9 @@ name: Crawl Selected Heartland Hub Institutions
 on: workflow_dispatch
 
 jobs:
-  crawl_mdh:
+  crawl_slcl1:
     env:
-      id: mdh
+      id: slcl1
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.id }}_data
-          path: ${{ env.id }}.json
+#          path: ${{ env.id }}.json
