@@ -112,6 +112,7 @@ class OAI:
 
         metadata_prefixes = [m.getText() for m in soup.find_all('metadataprefix')]
         if not metadata_prefixes:
+            print("Request URL: " + request_url)
             print(soup)
       return metadata_prefixes
 
