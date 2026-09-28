@@ -92,6 +92,7 @@ class OAI:
             request_url = proxy_url + "/" + self.proxy_prefix + "/"
         else:
             request_url = self.url
+        print(request_url)
         
         try:
             res = requests.get(request_url, params=params, headers=headers, **self.requests_kwargs)
@@ -112,7 +113,6 @@ class OAI:
 
         metadata_prefixes = [m.getText() for m in soup.find_all('metadataprefix')]
         if not metadata_prefixes:
-            print("Request URL: " + request_url)
             print(soup)
       return metadata_prefixes
 
