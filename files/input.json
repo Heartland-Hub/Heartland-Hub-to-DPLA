@@ -133,7 +133,10 @@
         "metadata_prefix": "oai_dc",
         "include": [2],
         "exclude": [],
-        "hub": "mohub"
+        "hub": "mohub",
+		"proxy-mode": "fixed",
+	    "proxy-prefix": "slcl"
+
     },
         {
         "institution": "St. Louis County Library",
