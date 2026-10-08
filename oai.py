@@ -248,17 +248,17 @@ class OAI:
                 timeouts += 1
                 # 5 second timeout isn't long enough for ISU
                 if self.id == 'isu': 
-                    print("\nRequest timed out. Waiting 30 seconds and trying again. Attempt {}".format(timeouts))
-                    time.sleep(30)    
+                    print("\nRequest timed out. Waiting 2 minutes and trying again. Attempt {}".format(timeouts))
+                    time.sleep(120)    
                 else:
                     print("\nRequest timed out. Waiting 5 seconds and trying again. Attempt {}".format(timeouts))
                     time.sleep(5)
                 # SGCL has over 500,000 items and a tendency to time out every 40,000 records or so, so 5 timeouts wasn't nearly enough
-                # Also having timeout problems with SHSM and MDH
-                if self.id in ['sgcl','shsm','mdh'] and timeouts == 40: 
+                # Also having timeout problems with SHSM, MDH, and ISU
+                if self.id in ['sgcl','shsm','mdh','isu'] and timeouts == 40: 
                     print("\nRequest has timed out 40 times. Stopping harvest.")
                     break
-                elif self.id not in ['sgcl','shsm','mdh'] and timeouts == 5:
+                elif self.id not in ['sgcl','shsm','mdh','isu'] and timeouts == 5:
                     print("\nRequest has timed out 5 times. Stopping harvest.")
                     break
                 continue
