@@ -246,19 +246,19 @@ class OAI:
                 res = requests.get(url, params=params, headers=headers, timeout=30, **self.requests_kwargs)
             except (requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout) as e:
                 timeouts += 1
-                # 5 second timeout isn't long enough for ISU
-                if self.id == 'isu': 
+                # 5 second timeout isn't long enough for ISU or UMKC
+                if self.id in ['isu','umkc']: 
                     print("\nRequest timed out. Waiting 2 minutes and trying again. Attempt {}".format(timeouts))
                     time.sleep(120)    
                 else:
                     print("\nRequest timed out. Waiting 5 seconds and trying again. Attempt {}".format(timeouts))
                     time.sleep(5)
                 # SGCL has over 500,000 items and a tendency to time out every 40,000 records or so, so 5 timeouts wasn't nearly enough
-                # Also having timeout problems with SHSM, MDH, and ISU
-                if self.id in ['sgcl','shsm','mdh','isu'] and timeouts == 40: 
+                # Also having timeout problems with SHSM, MDH, ISU, and UMKC
+                if self.id in ['sgcl','shsm','mdh','isu','umkc'] and timeouts == 40: 
                     print("\nRequest has timed out 40 times. Stopping harvest.")
                     break
-                elif self.id not in ['sgcl','shsm','mdh','isu'] and timeouts == 5:
+                elif self.id not in ['sgcl','shsm','mdh','isu','umkc'] and timeouts == 5:
                     print("\nRequest has timed out 5 times. Stopping harvest.")
                     break
                 continue
